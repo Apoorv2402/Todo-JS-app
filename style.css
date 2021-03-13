@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+#top {
+  position: fixed;
+  top: 0px;
+  background-color: rgb(218, 219, 219);
+  padding: 10px 10px;
+  width: 100vw;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  font-weight: 600;
+}
+
+.navlinks {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+  margin-right: 20px;
+}
+.inputfield {
+  display: block;
+  position: fixed;
+  bottom: 0px;
+}
+
+.inputfield input,
+button {
+  display: inline-block;
+  padding: 5px 10px;
+  width: 100vw;
+}
+#saveBtn {
+  background-color: rgb(30,144,255);
+}
+
+#hamburger {
+  display: none;
+}
+
+#todoContainer{
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+#todoContainer::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.todo {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  float: left;
+  width: 33.3%;
+  padding: 10px;
+  height: fit-content;
+}
+
+.dltBtn button {
+  background-color: rgb(241, 64, 64);
+  width: fit-content; 
+  float: right;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.taskTxt {
+  display: block;
+ 
+  margin: 5px 5px;
+  width: 100%;
+  height: 80%;
+}
+.taskTxt p {
+  margin: 5px 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .link {
+    text-align: center;
+    margin: 0px;
+    display: block;
+    width: 100vw;
+  }
+  .navlinks {
+    display: none;
+  }
+  .navbar {
+    padding: 5px 10px;
+    display: block;
+  }
+  #hamburger {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  #todoContainer{
+    margin-top:15% ;
+    margin-bottom:17% ;
+  }
+  .todo {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    height: fit-content;
+  }
+}
